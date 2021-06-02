@@ -12,6 +12,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
 using System.Data.SqlClient;
+using System.Windows.Media.Animation;
 
 
 namespace WpfApp32
@@ -25,7 +26,18 @@ namespace WpfApp32
         {
             InitializeComponent();
             DataTable dt_user = Select("SELECT * FROM [dbo].[users]"); // получаем данные из таблицы
-            
+            if (mw.d == 1)
+            {
+                SolidColorBrush brushL = new SolidColorBrush(); // создаем обращение к экземпляру кисти в виде переменной
+                SolidColorBrush brush = new SolidColorBrush(); // создаем обращение к экземпляру кисти в виде переменной
+                ColorAnimation da = new ColorAnimation(); // объявление экземпляра анимации смены цвета
+                ColorAnimation net = new ColorAnimation(); // объявление экземпляра анимации смены цвета
+                authgrid.Background = brush;// привязка кисти к фону элемента Grid
+                da.From = Colors.White;// указываем с какого цвета начнется анимация
+                da.To = Colors.Gray;// указываем на каком цвете закончится анимация
+                da.Duration = new Duration(TimeSpan.FromSeconds(1));// настройка задержки анимации в 1 секунду
+                brush.BeginAnimation(SolidColorBrush.ColorProperty, da);// точка старта анимации
+            }
         }
         MainWindow mw = new MainWindow();
 

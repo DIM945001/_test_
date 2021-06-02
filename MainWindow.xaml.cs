@@ -21,7 +21,7 @@ namespace WpfApp32
     /// </summary>
     public partial class MainWindow : Window
     {
-        
+        public int d = 0;
         public MainWindow()
         {
             InitializeComponent();
@@ -60,6 +60,7 @@ namespace WpfApp32
 
                 Window ath = new auth();
                 ath.ShowDialog();
+                
                 if (ath.DialogResult == true)
                 {
                     authButton.Content = "Вы авторизованы";
@@ -130,7 +131,7 @@ namespace WpfApp32
             net.Duration = new Duration(TimeSpan.FromSeconds(1));// настройка задержки анимации в 1 секунду
             brushL.BeginAnimation(SolidColorBrush.ColorProperty, net);// точка старта анимации
 
-
+            d = 1;
         }
 
         private void Darkbox_Unchecked(object sender, RoutedEventArgs e)
@@ -147,7 +148,7 @@ namespace WpfApp32
             net.Duration = new Duration(TimeSpan.FromSeconds(1));//настройка задержки анимации в 1 секунду
             brushL.BeginAnimation(SolidColorBrush.ColorProperty, net);// точка старта анимации
 
-
+            d = 0;
         }
 
       

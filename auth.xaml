@@ -6,7 +6,7 @@
         xmlns:local="clr-namespace:WpfApp32"
         mc:Ignorable="d"
         Title="auth" Height="250" Width="400">
-    <Grid Margin="0,0,38,0">
+    <Grid x:Name="authgrid" Margin="0,0,38,0">
 
 
         <Grid.ColumnDefinitions>
