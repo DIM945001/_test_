@@ -31,13 +31,13 @@ namespace WpfApp32
 
         private void AuthButton_GotFocus(object sender, RoutedEventArgs e)
         {
-           
+            return;
         }
 
         private void AuthButton_MouseEnter(object sender, MouseEventArgs e)
         {
-          //  authButton.Content = "НЕ НАЖИМАТЬ!!!!!!!";
-            
+            //  authButton.Content = "НЕ НАЖИМАТЬ!!!!!!!";
+            return;
         }
 
         private void AuthButton_MouseLeave(object sender, MouseEventArgs e)
@@ -48,7 +48,7 @@ namespace WpfApp32
 
         private void AuthButton_MouseDoubleClick(object sender, MouseButtonEventArgs e)
         {
-            
+            return;
         }
 
         public void Button_Click(object sender, RoutedEventArgs e)
@@ -65,7 +65,9 @@ namespace WpfApp32
                     authButton.Content = "Вы авторизованы";
                     lgscs.Visibility = Visibility.Visible;
                     butt.Visibility = Visibility.Hidden;
+                    mw.Show();
                 }
+                mw.Hide();
                
               
               
@@ -87,7 +89,7 @@ namespace WpfApp32
             var windowClose = MessageBox.Show("хотите выйти", "окно которое бесит вас", MessageBoxButton.OKCancel, MessageBoxImage.Question, MessageBoxResult.Cancel) == MessageBoxResult.OK;
             if (windowClose == false)
             {
-                e.Cancel = true;
+                e.Cancel = true; // отмена закрытия окна
             }
             else
             {
@@ -97,12 +99,12 @@ namespace WpfApp32
 
         private void Title_MouseEnter(object sender, MouseEventArgs e)
         {
-    
-            
+
+            return;
         }
         private void Title_MouseLeave(object sender, MouseEventArgs e)
         {
-           
+            return;
         }
         SolidColorBrush brushL = new SolidColorBrush();
         SolidColorBrush brush = new SolidColorBrush();
@@ -148,15 +150,7 @@ namespace WpfApp32
 
         }
 
-        private void Wingrid_GotFocus(object sender, RoutedEventArgs e)
-        {
-            
-        }
-
-        public void authscs()
-        {
-            
-        }
+      
 
         private void Button_Click_1(object sender, RoutedEventArgs e)
         {
@@ -164,14 +158,6 @@ namespace WpfApp32
             Uslugi.Show();
         }
 
-        private void Window_Closed(object sender, EventArgs e)
-        {
-           
-        }
-
-        private void Window_Initialized(object sender, EventArgs e)
-        {
-            
-        }
+     
     }
 }
