@@ -5,8 +5,8 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:WpfApp32"
         mc:Ignorable="d"
-        Title="uslugi" Height="450" Width="800">
+        Title="uslugi" Height="450" Width="400">
     <Grid>
-        <Button Content="обратиться к инспектору" Height="20" Width="150" Margin="45,50,597,349" />
+        <Button  Content="подать заявку в страховую компанию" Height="20" Margin="10,40,10,359" />
     </Grid>
 </Window>

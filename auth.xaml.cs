@@ -25,10 +25,7 @@ namespace WpfApp32
         {
             InitializeComponent();
             DataTable dt_user = Select("SELECT * FROM [dbo].[users]"); // получаем данные из таблицы
-            for (int i = 0; i < dt_user.Rows.Count; i++)
-            { // перебираем данные
-                MessageBox.Show(dt_user.Rows[i][0] + "|" + dt_user.Rows[i][1]); // выводим данные
-            }
+            
         }
         MainWindow mw = new MainWindow();
 
@@ -39,7 +36,7 @@ namespace WpfApp32
         {
             DataTable dataTable = new DataTable("dataBase");                // создаём таблицу в приложении
                                                                             // подключаемся к базе данных
-            SqlConnection sqlConnection = new SqlConnection("server=CAB212-2;Trusted_Connection=yes;DataBase=AUTH;");
+            SqlConnection sqlConnection = new SqlConnection("server=CAB212-2\\MSSQLSERVER20;Trusted_Connection=yes;DataBase=AUTH;");
             sqlConnection.Open();                                           // открываем базу данных
             SqlCommand sqlCommand = sqlConnection.CreateCommand();          // создаём команду
             sqlCommand.CommandText = selectSQL;                             // присваиваем команде текст
@@ -60,7 +57,8 @@ namespace WpfApp32
                         DataTable dt_user = Select("SELECT * FROM [dbo].[users] WHERE [login] = '" + textbox1.Text + "' AND [password] = '" + textbox2.Password + "'");
                         if (dt_user.Rows.Count > 0) // если такая запись существует       
                         {
-                            MessageBox.Show("Пользователь авторизовался"); // говорим, что авторизовался         
+                            MessageBox.Show("Пользователь авторизовался"); // говорим, что авторизовался
+                        DialogResult = true;
                         }
                         else MessageBox.Show("Пользователя не найден"); // выводим ошибку  
                     }

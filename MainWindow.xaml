@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:WpfApp32"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800" Closing="Window_Closing" ResizeMode="NoResize" Closed="Window_Closed">
+        Title="MainWindow" Height="450" Width="800" Closing="Window_Closing" ResizeMode="NoResize" Closed="Window_Closed" Initialized="Window_Initialized">
     <Grid x:Name="wingrid" Background="White" GotFocus="Wingrid_GotFocus" >
         <Label x:Name="title" Content="..." HorizontalAlignment="Left" Margin="134,86,0,0" VerticalAlignment="Top" Height="80" Width="551" FontSize="30" MouseEnter="Title_MouseEnter" Background="{x:Null}" FontWeight="Bold" MouseLeave="Title_MouseLeave">
             <Label.Foreground>

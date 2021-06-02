@@ -26,6 +26,7 @@ namespace WpfApp32
         {
             InitializeComponent();
             this.wingrid.Background = new SolidColorBrush(Colors.White);
+            
         }
 
         private void AuthButton_GotFocus(object sender, RoutedEventArgs e)
@@ -50,7 +51,7 @@ namespace WpfApp32
             
         }
 
-        private void Button_Click(object sender, RoutedEventArgs e)
+        public void Button_Click(object sender, RoutedEventArgs e)
         {
 
             //try
@@ -58,7 +59,7 @@ namespace WpfApp32
                 MainWindow mw = new MainWindow();
 
                 Window ath = new auth();
-                ath.Show();
+                ath.ShowDialog();
                 
                
               
@@ -82,6 +83,10 @@ namespace WpfApp32
             if (windowClose == false)
             {
                 e.Cancel = true;
+            }
+            else
+            {
+                Application.Current.Shutdown();
             }
         }
 
@@ -154,6 +159,11 @@ namespace WpfApp32
         private void Window_Closed(object sender, EventArgs e)
         {
            
+        }
+
+        private void Window_Initialized(object sender, EventArgs e)
+        {
+            
         }
     }
 }
