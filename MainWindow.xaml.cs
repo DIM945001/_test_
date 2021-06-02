@@ -25,7 +25,7 @@ namespace WpfApp32
         public MainWindow()
         {
             InitializeComponent();
-            this.wingrid.Background = new SolidColorBrush(Colors.White);
+            this.wingrid.Background = new SolidColorBrush(Colors.White);//создаю экземпляр кисти на элемент Grid, белого цвета
             
         }
 
@@ -63,11 +63,11 @@ namespace WpfApp32
                 if (ath.DialogResult == true)
                 {
                     authButton.Content = "Вы авторизованы";
-                    lgscs.Visibility = Visibility.Visible;
-                    butt.Visibility = Visibility.Hidden;
-                    mw.Show();
+                    lgscs.Visibility = Visibility.Visible; //
+                    butt.Visibility = Visibility.Hidden; //
+                    mw.Show(); //
                 }
-                mw.Hide();
+                mw.Hide(); //
                
               
               
@@ -87,13 +87,13 @@ namespace WpfApp32
         {
            
             var windowClose = MessageBox.Show("хотите выйти", "окно которое бесит вас", MessageBoxButton.OKCancel, MessageBoxImage.Question, MessageBoxResult.Cancel) == MessageBoxResult.OK;
-            if (windowClose == false)
+            if (windowClose == false) 
             {
                 e.Cancel = true; // отмена закрытия окна
             }
             else
             {
-                Application.Current.Shutdown();
+                Application.Current.Shutdown(); //закрытие окон
             }
         }
 
@@ -106,46 +106,46 @@ namespace WpfApp32
         {
             return;
         }
-        SolidColorBrush brushL = new SolidColorBrush();
-        SolidColorBrush brush = new SolidColorBrush();
-        ColorAnimation da = new ColorAnimation();
-        ColorAnimation net = new ColorAnimation();
+        SolidColorBrush brushL = new SolidColorBrush(); // создаем обращение к экземпляру кисти в виде переменной
+        SolidColorBrush brush = new SolidColorBrush(); // создаем обращение к экземпляру кисти в виде переменной
+        ColorAnimation da = new ColorAnimation(); // объявление экземпляра анимации смены цвета
+        ColorAnimation net = new ColorAnimation(); // объявление экземпляра анимации смены цвета
 
         private void CheckBox_Checked(object sender, RoutedEventArgs e)
         {
-            wingrid.Background = brush;
-            da.From = Colors.White;
-            da.To = Colors.Gray;
-            da.Duration = new Duration(TimeSpan.FromSeconds(1));
-            brush.BeginAnimation(SolidColorBrush.ColorProperty, da);
+            wingrid.Background = brush;// привязка кисти к фону элемента Grid
+            da.From = Colors.White;// указываем с какого цвета начнется анимация
+            da.To = Colors.Gray;// указываем на каком цвете закончится анимация
+            da.Duration = new Duration(TimeSpan.FromSeconds(1));// настройка задержки анимации в 1 секунду
+            brush.BeginAnimation(SolidColorBrush.ColorProperty, da);// точка старта анимации
 
 
-            authButton.Foreground = brushL;
-            title.Foreground = brushL;
-            USLUGI_LINK.Foreground = brushL;
-            lgscs.Foreground = brushL;
-            darkbox.Foreground = brushL;
-            net.From = Colors.Black;
-            net.To = Colors.White;
-            net.Duration = new Duration(TimeSpan.FromSeconds(1));
-            brushL.BeginAnimation(SolidColorBrush.ColorProperty, net);
-           
+            authButton.Foreground = brushL;// привязка кисти к цвету текста элемента кнопки авторизации
+            title.Foreground = brushL;// привязка кисти к цвету текста названия программного продукта
+            USLUGI_LINK.Foreground = brushL;// привязка кисти к цвету текста элемента кнопки с услугами
+            lgscs.Foreground = brushL;//привязка кисти к цвету текста надписи авторизации
+            darkbox.Foreground = brushL;//привязка кисти к цвету текста переключателя
+            net.From = Colors.Black;// указываем с какого цвета начнется анимация
+            net.To = Colors.White;//указываем на каком цвете закончится анимация
+            net.Duration = new Duration(TimeSpan.FromSeconds(1));// настройка задержки анимации в 1 секунду
+            brushL.BeginAnimation(SolidColorBrush.ColorProperty, net);// точка старта анимации
+
 
         }
 
         private void Darkbox_Unchecked(object sender, RoutedEventArgs e)
         {
-            da.From = Colors.Gray;
-            da.To = Colors.White;
-            da.Duration = new Duration(TimeSpan.FromSeconds(1));
-            brush.BeginAnimation(SolidColorBrush.ColorProperty, da);
-            USLUGI_LINK.Foreground = brushL;
-            authButton.Foreground = brushL;
-            title.Foreground = brushL;
-            net.From = Colors.White;
-            net.To = Colors.Black;
-            net.Duration = new Duration(TimeSpan.FromSeconds(1));
-            brushL.BeginAnimation(SolidColorBrush.ColorProperty, net);
+            da.From = Colors.Gray;//указываем с какого цвета начнется анимация
+            da.To = Colors.White;//указываем на каком цвете закончится анимация
+            da.Duration = new Duration(TimeSpan.FromSeconds(1));//настройка задержки анимации в 1 секунду
+            brush.BeginAnimation(SolidColorBrush.ColorProperty, da);// точка старта анимации
+            USLUGI_LINK.Foreground = brushL;// привязка кисти к цвету текста элемента кнопки с услугами
+            authButton.Foreground = brushL;//привязка кисти к цвету текста надписи авторизации
+            title.Foreground = brushL;//привязка кисти к цвету текста названия программного продукта
+            net.From = Colors.White;// указываем с какого цвета начнется анимация
+            net.To = Colors.Black;//указываем на каком цвете закончится анимация
+            net.Duration = new Duration(TimeSpan.FromSeconds(1));//настройка задержки анимации в 1 секунду
+            brushL.BeginAnimation(SolidColorBrush.ColorProperty, net);// точка старта анимации
 
 
         }

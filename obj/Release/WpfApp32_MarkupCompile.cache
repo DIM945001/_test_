@@ -4,15 +4,15 @@
 winexe
 C#
 .cs
-C:\Users\WSR\Source\Repos\_test_\obj\Debug\
+C:\Users\WSR\Source\Repos\_test_\obj\Release\
 WpfApp32
 none
 false
-DEBUG;TRACE
+TRACE
 C:\Users\WSR\Source\Repos\_test_\App.xaml
 4-1082506818
 
-9-569271072
+8-2065986126
 121654848548
 auth.xaml;MainWindow.xaml;uslugi.xaml;Window1.xaml;
 
