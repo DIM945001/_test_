@@ -7,7 +7,7 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800" Closing="Window_Closing" ResizeMode="NoResize" Closed="Window_Closed" Initialized="Window_Initialized">
     <Grid x:Name="wingrid" Background="White" GotFocus="Wingrid_GotFocus" >
-        <Label x:Name="title" Content="..." HorizontalAlignment="Left" Margin="134,86,0,0" VerticalAlignment="Top" Height="80" Width="551" FontSize="30" MouseEnter="Title_MouseEnter" Background="{x:Null}" FontWeight="Bold" MouseLeave="Title_MouseLeave">
+        <Label x:Name="title" Content="Страховая мед компания" HorizontalAlignment="Left" Margin="134,86,0,0" VerticalAlignment="Top" Height="80" Width="551" FontSize="30" MouseEnter="Title_MouseEnter" Background="{x:Null}" FontWeight="Bold" MouseLeave="Title_MouseLeave">
             <Label.Foreground>
                 <LinearGradientBrush EndPoint="0.5,1" MappingMode="RelativeToBoundingBox" StartPoint="0.5,0">
                     <LinearGradientBrush.RelativeTransform>
@@ -27,7 +27,7 @@
             <Label x:Name="authButton" Content="Авторизация" FontSize="20" GotFocus="AuthButton_GotFocus"  MouseEnter="AuthButton_MouseEnter" MouseLeave="AuthButton_MouseLeave" MouseDoubleClick="AuthButton_MouseDoubleClick" Height="57" Width="180"/>
         </Button>
         <CheckBox x:Name="darkbox" Content="темный режим" HorizontalAlignment="Left" Margin="61,27,0,0" VerticalAlignment="Top" Checked="CheckBox_Checked" Unchecked="Darkbox_Unchecked"/>
-        <Label x:Name="lgscs" Content="Вы Авторизованы" HorizontalAlignment="Left" Margin="640,27,0,0" VerticalAlignment="Top" Visibility="Hidden"/>
+        <Label x:Name="lgscs" Content="Вы Авторизованы" HorizontalAlignment="Left" Margin="600,12,0,0" VerticalAlignment="Top"  FontSize="20" Visibility="Hidden"/>
         <Button x:Name="USLUGI_LINK" Content="Услуги" Background="{x:Null}" FontSize="30" HorizontalAlignment="Left" Margin="134,166,0,0" VerticalAlignment="Top" Width="214" BorderBrush="{x:Null}" Height="158" Click="Button_Click_1"/>
     </Grid>
 </Window>

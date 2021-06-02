@@ -60,7 +60,12 @@ namespace WpfApp32
 
                 Window ath = new auth();
                 ath.ShowDialog();
-                
+                if (ath.DialogResult == true)
+                {
+                    authButton.Content = "Вы авторизованы";
+                    lgscs.Visibility = Visibility.Visible;
+                    butt.Visibility = Visibility.Hidden;
+                }
                
               
               
@@ -112,9 +117,12 @@ namespace WpfApp32
             da.Duration = new Duration(TimeSpan.FromSeconds(1));
             brush.BeginAnimation(SolidColorBrush.ColorProperty, da);
 
+
             authButton.Foreground = brushL;
             title.Foreground = brushL;
             USLUGI_LINK.Foreground = brushL;
+            lgscs.Foreground = brushL;
+            darkbox.Foreground = brushL;
             net.From = Colors.Black;
             net.To = Colors.White;
             net.Duration = new Duration(TimeSpan.FromSeconds(1));

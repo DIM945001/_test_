@@ -60,7 +60,7 @@ namespace WpfApp32
                             MessageBox.Show("Пользователь авторизовался"); // говорим, что авторизовался
                         DialogResult = true;
                         }
-                        else MessageBox.Show("Пользователя не найден"); // выводим ошибку  
+                        else MessageBox.Show("Пользователь не найден или неверный пароль"); // выводим ошибку  
                     }
                     else MessageBox.Show("Введите пароль"); // выводим ошибку    
                 }
