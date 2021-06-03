@@ -13,6 +13,8 @@ using System.Windows.Navigation;
 using System.Windows.Shapes;
 using System.Diagnostics;
 using System.Windows.Media.Animation;
+using System.Threading.Tasks;
+using System.Threading;
 
 namespace WpfApp32
 {
@@ -21,44 +23,43 @@ namespace WpfApp32
     /// </summary>
     public partial class MainWindow : Window
     {
-        public int d = 0;
+       public int d;
         public MainWindow()
         {
             InitializeComponent();
             this.wingrid.Background = new SolidColorBrush(Colors.White);//создаю экземпляр кисти на элемент Grid, белого цвета
+            debug.Content = d;
             
         }
 
         private void AuthButton_GotFocus(object sender, RoutedEventArgs e)
         {
-            return;
+            
         }
 
         private void AuthButton_MouseEnter(object sender, MouseEventArgs e)
         {
-            //  authButton.Content = "НЕ НАЖИМАТЬ!!!!!!!";
-            return;
+             authButton.Content = "НЕ НАЖИМАТЬ!!!!!!!";
         }
 
         private void AuthButton_MouseLeave(object sender, MouseEventArgs e)
         {
             authButton.Content = "Авторизация";
-            
         }
 
         private void AuthButton_MouseDoubleClick(object sender, MouseButtonEventArgs e)
         {
-            return;
+            
         }
 
         public void Button_Click(object sender, RoutedEventArgs e)
-        {
+        { 
+            MainWindow mw = new MainWindow();
 
-            //try
-            {
-                MainWindow mw = new MainWindow();
-
-                Window ath = new auth();
+            d = 1;
+            Window ath = new auth();
+            
+                
                 ath.ShowDialog();
                 
                 if (ath.DialogResult == true)
@@ -69,15 +70,13 @@ namespace WpfApp32
                     mw.Show(); //
                 }
                 mw.Hide(); //
+                
                
               
               
-            }
-           // catch
-            {
-                
-             //   return;
-            }
+            
+          
+           
             
             
         }
@@ -101,18 +100,19 @@ namespace WpfApp32
         private void Title_MouseEnter(object sender, MouseEventArgs e)
         {
 
-            return;
+          
         }
         private void Title_MouseLeave(object sender, MouseEventArgs e)
         {
-            return;
+           
         }
+
         SolidColorBrush brushL = new SolidColorBrush(); // создаем обращение к экземпляру кисти в виде переменной
         SolidColorBrush brush = new SolidColorBrush(); // создаем обращение к экземпляру кисти в виде переменной
         ColorAnimation da = new ColorAnimation(); // объявление экземпляра анимации смены цвета
         ColorAnimation net = new ColorAnimation(); // объявление экземпляра анимации смены цвета
 
-        private void CheckBox_Checked(object sender, RoutedEventArgs e)
+        private void change() 
         {
             wingrid.Background = brush;// привязка кисти к фону элемента Grid
             da.From = Colors.White;// указываем с какого цвета начнется анимация
@@ -130,12 +130,24 @@ namespace WpfApp32
             net.To = Colors.White;//указываем на каком цвете закончится анимация
             net.Duration = new Duration(TimeSpan.FromSeconds(1));// настройка задержки анимации в 1 секунду
             brushL.BeginAnimation(SolidColorBrush.ColorProperty, net);// точка старта анимации
-
+            
+        }
+        private void CheckBox_Checked(object sender, RoutedEventArgs e)
+        {
             d = 1;
+
+            change();
+           
+            wingrid.Background = Brushes.Gray;
+         
+            
+            
+            
         }
 
         private void Darkbox_Unchecked(object sender, RoutedEventArgs e)
         {
+            d = 0;
             da.From = Colors.Gray;//указываем с какого цвета начнется анимация
             da.To = Colors.White;//указываем на каком цвете закончится анимация
             da.Duration = new Duration(TimeSpan.FromSeconds(1));//настройка задержки анимации в 1 секунду
@@ -147,14 +159,15 @@ namespace WpfApp32
             net.To = Colors.Black;//указываем на каком цвете закончится анимация
             net.Duration = new Duration(TimeSpan.FromSeconds(1));//настройка задержки анимации в 1 секунду
             brushL.BeginAnimation(SolidColorBrush.ColorProperty, net);// точка старта анимации
-
-            d = 0;
+            debug.Content = d;
+            
         }
 
       
 
         private void Button_Click_1(object sender, RoutedEventArgs e)
         {
+            
             uslugi Uslugi = new uslugi();
             Uslugi.Show();
         }

@@ -29,5 +29,6 @@
         <CheckBox x:Name="darkbox" Content="темный режим" HorizontalAlignment="Left" Margin="61,27,0,0" VerticalAlignment="Top" Checked="CheckBox_Checked" Unchecked="Darkbox_Unchecked"/>
         <Label x:Name="lgscs" Content="Вы Авторизованы" HorizontalAlignment="Left" Margin="600,12,0,0" VerticalAlignment="Top"  FontSize="20" Visibility="Hidden"/>
         <Button x:Name="USLUGI_LINK" Content="Услуги" Background="{x:Null}" FontSize="30" HorizontalAlignment="Left" Margin="134,166,0,0" VerticalAlignment="Top" Width="214" BorderBrush="{x:Null}" Height="158" Click="Button_Click_1"/>
+        <Label x:Name="debug" Content="Label" HorizontalAlignment="Left" Margin="514,300,0,0" VerticalAlignment="Top"/>
     </Grid>
 </Window>

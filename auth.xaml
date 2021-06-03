@@ -14,7 +14,7 @@
             <ColumnDefinition/>
         </Grid.ColumnDefinitions>
         <Label Content="Логин" HorizontalAlignment="Left" Grid.Row="0" Margin="34,46,0,0" VerticalAlignment="Top" Height="43" Width="81" FontSize="20"/>
-        <Label Content="Пароль" Margin="34,104,28,61" FontSize="20"/>
+        <Label x:Name="parol" Content="Пароль" Margin="34,104,28,61" FontSize="20"/>
         <TextBox x:Name="textbox1" Grid.Column="1" HorizontalAlignment="Left" Height="38" Margin="40,53,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="144" FontSize="20"/>
         <PasswordBox x:Name="textbox2" Grid.Column="1" HorizontalAlignment="Left" Margin="40,104,0,0" VerticalAlignment="Top" Width="144" FontSize="20" Height="45"/>
         <Button Content="Войти" Grid.Column="1" HorizontalAlignment="Left" Margin="40,165,0,0" VerticalAlignment="Top" Width="144" Click="Button_Click" Height="35" IsDefault="True" />
