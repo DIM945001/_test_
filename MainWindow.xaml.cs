@@ -23,23 +23,23 @@ namespace WpfApp32
     /// </summary>
     public partial class MainWindow : Window
     {
-       public int d;
+        public string d;
         public MainWindow()
         {
             InitializeComponent();
             this.wingrid.Background = new SolidColorBrush(Colors.White);//создаю экземпляр кисти на элемент Grid, белого цвета
             debug.Content = d;
-            
+
         }
 
         private void AuthButton_GotFocus(object sender, RoutedEventArgs e)
         {
-            
+
         }
 
         private void AuthButton_MouseEnter(object sender, MouseEventArgs e)
         {
-             authButton.Content = "НЕ НАЖИМАТЬ!!!!!!!";
+            authButton.Content = "НЕ НАЖИМАТЬ!!!!!!!";
         }
 
         private void AuthButton_MouseLeave(object sender, MouseEventArgs e)
@@ -49,45 +49,45 @@ namespace WpfApp32
 
         private void AuthButton_MouseDoubleClick(object sender, MouseButtonEventArgs e)
         {
-            
+
         }
 
         public void Button_Click(object sender, RoutedEventArgs e)
-        { 
+        {
             MainWindow mw = new MainWindow();
 
-            d = 1;
-            Window ath = new auth();
-            
-                
-                ath.ShowDialog();
-                
-                if (ath.DialogResult == true)
-                {
-                    authButton.Content = "Вы авторизованы";
-                    lgscs.Visibility = Visibility.Visible; //
-                    butt.Visibility = Visibility.Hidden; //
-                    mw.Show(); //
-                }
-                mw.Hide(); //
-                
-               
-              
-              
-            
-          
            
-            
-            
+            Window ath = new auth();
+
+
+            ath.ShowDialog();
+
+            if (ath.DialogResult == true)
+            {
+                authButton.Content = "Вы авторизованы";
+                lgscs.Visibility = Visibility.Visible; //
+                butt.Visibility = Visibility.Hidden; //
+                mw.Show(); //
+            }
+            mw.Hide(); //
+
+
+
+
+
+
+
+
+
         }
 
-       
+
 
         private void Window_Closing(object sender, System.ComponentModel.CancelEventArgs e)
         {
-           
+
             var windowClose = MessageBox.Show("хотите выйти", "окно которое бесит вас", MessageBoxButton.OKCancel, MessageBoxImage.Question, MessageBoxResult.Cancel) == MessageBoxResult.OK;
-            if (windowClose == false) 
+            if (windowClose == false)
             {
                 e.Cancel = true; // отмена закрытия окна
             }
@@ -100,11 +100,11 @@ namespace WpfApp32
         private void Title_MouseEnter(object sender, MouseEventArgs e)
         {
 
-          
+
         }
         private void Title_MouseLeave(object sender, MouseEventArgs e)
         {
-           
+
         }
 
         SolidColorBrush brushL = new SolidColorBrush(); // создаем обращение к экземпляру кисти в виде переменной
@@ -112,8 +112,9 @@ namespace WpfApp32
         ColorAnimation da = new ColorAnimation(); // объявление экземпляра анимации смены цвета
         ColorAnimation net = new ColorAnimation(); // объявление экземпляра анимации смены цвета
 
-        private void change() 
+        private void change()
         {
+            d = "1";
             wingrid.Background = brush;// привязка кисти к фону элемента Grid
             da.From = Colors.White;// указываем с какого цвета начнется анимация
             da.To = Colors.Gray;// указываем на каком цвете закончится анимация
@@ -130,24 +131,13 @@ namespace WpfApp32
             net.To = Colors.White;//указываем на каком цвете закончится анимация
             net.Duration = new Duration(TimeSpan.FromSeconds(1));// настройка задержки анимации в 1 секунду
             brushL.BeginAnimation(SolidColorBrush.ColorProperty, net);// точка старта анимации
-            
-        }
-        private void CheckBox_Checked(object sender, RoutedEventArgs e)
-        {
-            d = 1;
 
-            change();
-           
-            wingrid.Background = Brushes.Gray;
-         
-            
-            
-            
         }
 
-        private void Darkbox_Unchecked(object sender, RoutedEventArgs e)
-        {
-            d = 0;
+        private void chAnge()
+            {
+            d = "0";
+            
             da.From = Colors.Gray;//указываем с какого цвета начнется анимация
             da.To = Colors.White;//указываем на каком цвете закончится анимация
             da.Duration = new Duration(TimeSpan.FromSeconds(1));//настройка задержки анимации в 1 секунду
@@ -159,7 +149,29 @@ namespace WpfApp32
             net.To = Colors.Black;//указываем на каком цвете закончится анимация
             net.Duration = new Duration(TimeSpan.FromSeconds(1));//настройка задержки анимации в 1 секунду
             brushL.BeginAnimation(SolidColorBrush.ColorProperty, net);// точка старта анимации
-            debug.Content = d;
+            
+        }
+        private async void CheckBox_Checked( object sender, RoutedEventArgs e)
+        {
+            
+            
+            change();
+            await Task.Delay(1000);
+            wingrid.Background = Brushes.Gray;
+         
+            
+            
+            
+        }
+
+        private async void Darkbox_Unchecked(object sender, RoutedEventArgs e)
+        {
+            
+            chAnge();
+          
+            await Task.Delay(1000);
+
+
             
         }
 

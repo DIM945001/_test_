@@ -32,9 +32,9 @@ namespace WpfApp32
             InitializeComponent();
             parol.Content = mw.d;
           //  DataTable dt_user = Select("SELECT * FROM [dbo].[users]"); // получаем данные из таблицы
-            if (mw.wingrid.Background == Brushes.Gray)
+            if (mw.d == "1")
             {
-
+               
                 authgrid.Background = Brushes.Gray;
             }
         }

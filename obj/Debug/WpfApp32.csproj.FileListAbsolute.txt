@@ -90,3 +90,4 @@ C:\Users\DIMANI4\Source\Repos\DIM945001\_test_\obj\Debug\WpfApp32.csproj.Generat
 C:\Users\DIMANI4\Source\Repos\DIM945001\_test_\obj\Debug\WpfApp32.csproj.CoreCompileInputs.cache
 C:\Users\DIMANI4\Source\Repos\DIM945001\_test_\obj\Debug\WpfApp32.exe
 C:\Users\DIMANI4\Source\Repos\DIM945001\_test_\obj\Debug\WpfApp32.pdb
+C:\Users\DIMANI4\Source\Repos\DIM945001\_test_\bin\Debug\WpfApp32.exe.config
