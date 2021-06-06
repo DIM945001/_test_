@@ -22,21 +22,12 @@ namespace WpfApp32
     /// </summary>
     public partial class auth : Window
     {
-        MainWindow mw = new MainWindow();
+         MainWindow mw = new MainWindow();
         
         public auth()
         {
-            
-
-
+           
             InitializeComponent();
-            parol.Content = mw.d;
-          //  DataTable dt_user = Select("SELECT * FROM [dbo].[users]"); // получаем данные из таблицы
-            if (mw.d == "1")
-            {
-               
-                authgrid.Background = Brushes.Gray;
-            }
         }
        
 
@@ -61,16 +52,21 @@ namespace WpfApp32
         private void Button_Click(object sender, RoutedEventArgs e)
         {
 
-                //if (textbox1.Text.Length > 0) // проверяем введён ли логин     
-                //{
-                //    if (textbox2.Password.Length > 0) // проверяем введён ли пароль         
-                //    {             // ищем в базе данных пользователя с такими данными         
-                //        DataTable dt_user = Select("SELECT * FROM [dbo].[users] WHERE [login] = '" + textbox1.Text + "' AND [password] = '" + textbox2.Password + "'");
-                //        if (dt_user.Rows.Count > 0) // если такая запись существует       
-                //        {
-                //            MessageBox.Show("Пользователь авторизовался"); // говорим, что авторизовался
-                //        DialogResult = true;
-                //        Close();
+            //if (textbox1.Text.Length > 0) // проверяем введён ли логин     
+            //{
+            //    if (textbox2.Password.Length > 0) // проверяем введён ли пароль         
+            //    {             // ищем в базе данных пользователя с такими данными         
+            //        DataTable dt_user = Select("SELECT * FROM [dbo].[users] WHERE [login] = '" + textbox1.Text + "' AND [password] = '" + textbox2.Password + "'");
+            //        if (dt_user.Rows.Count > 0) // если такая запись существует       
+            //        {
+            MessageBoxResult messageBoxResult = MessageBox.Show("Пользователь авторизовался", comboBox.Text); // говорим, что авторизовался
+                       DialogResult = true;
+            this.Close();
+
+            }
+            
+             
+                       
                 //        }
                 //        else MessageBox.Show("Пользователь не найден или неверный пароль"); // выводим ошибку  
                 //    }
@@ -79,6 +75,7 @@ namespace WpfApp32
                 //else MessageBox.Show("Введите логин"); // выводим ошибку 
             }
 
+       
 
 
 
@@ -86,41 +83,42 @@ namespace WpfApp32
 
 
 
-            //        if (login == textbox1.Text)
-            //        {
-            //            if (pass == textbox2.Password)
-            //            {
-            //                MessageBox.Show("OK");
-            //                DialogResult = true;
-            //                mw.butt.Visibility = Visibility.Hidden;
-            //                mw.lgscs.Visibility = Visibility.Visible;
-            //            }
-            //            else
-            //            {
-            //                if (textbox2.Password == "")
-            //                {
-            //                    MessageBox.Show("где пароль");
-            //                }
-            //                else
-            //                {
-            //                    MessageBox.Show("неверный пароль");
-            //                }
-            //            }
-            //        }
-            //        else
-            //        {
-            //            if (textbox1.Text == "")
-            //            {
-            //                MessageBox.Show("где логин");
-            //            }
-            //            else
-            //            {
-            //                MessageBox.Show("неверный логин");
-            //            }
 
-            //        }
-        }
+        //        if (login == textbox1.Text)
+        //        {
+        //            if (pass == textbox2.Password)
+        //            {
+        //                MessageBox.Show("OK");
+        //                DialogResult = true;
+        //                mw.butt.Visibility = Visibility.Hidden;
+        //                mw.lgscs.Visibility = Visibility.Visible;
+        //            }
+        //            else
+        //            {
+        //                if (textbox2.Password == "")
+        //                {
+        //                    MessageBox.Show("где пароль");
+        //                }
+        //                else
+        //                {
+        //                    MessageBox.Show("неверный пароль");
+        //                }
+        //            }
+        //        }
+        //        else
+        //        {
+        //            if (textbox1.Text == "")
+        //            {
+        //                MessageBox.Show("где логин");
+        //            }
+        //            else
+        //            {
+        //                MessageBox.Show("неверный логин");
+        //            }
 
-
+        //        }
     }
+
+
+    
 

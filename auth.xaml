@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:WpfApp32"
         mc:Ignorable="d"
-        Title="auth" Height="250" Width="400">
+        Title="Авторизация" Height="250" Width="400">
     <Grid x:Name="authgrid" Margin="0,0,38,0">
 
 
@@ -17,6 +17,12 @@
         <Label x:Name="parol" Content="Пароль" Margin="34,104,28,61" FontSize="20"/>
         <TextBox x:Name="textbox1" Grid.Column="1" HorizontalAlignment="Left" Height="38" Margin="40,53,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="144" FontSize="20"/>
         <PasswordBox x:Name="textbox2" Grid.Column="1" HorizontalAlignment="Left" Margin="40,104,0,0" VerticalAlignment="Top" Width="144" FontSize="20" Height="45"/>
-        <Button Content="Войти" Grid.Column="1" HorizontalAlignment="Left" Margin="40,165,0,0" VerticalAlignment="Top" Width="144" Click="Button_Click" Height="35" IsDefault="True" />
+        <Button x:Name="acceptbut" Content="Войти" Grid.Column="1" HorizontalAlignment="Left" Margin="40,165,0,0" VerticalAlignment="Top" Width="144" Click="Button_Click" Height="35" IsDefault="True" />
+        <ComboBox x:Name="comboBox" HorizontalAlignment="Left" Margin="34,165,0,0" VerticalAlignment="Top" Width="93" Height="35">
+            <ComboBoxItem Content="клиент"/>
+            <ComboBoxItem Content="сотрудник"/>
+            <ComboBoxItem Content="инспектор"/>
+            <ComboBoxItem Content="бухгалтер"/>
+        </ComboBox>
     </Grid>
 </Window>

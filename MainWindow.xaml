@@ -5,30 +5,16 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:WpfApp32"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800" Closing="Window_Closing" ResizeMode="NoResize">
-    <Grid x:Name="wingrid" >
-        <Label x:Name="title" Content="Страховая мед компания" HorizontalAlignment="Left" Margin="134,86,0,0" VerticalAlignment="Top" Height="80" Width="551" FontSize="30" MouseEnter="Title_MouseEnter" Background="{x:Null}" FontWeight="Bold" MouseLeave="Title_MouseLeave">
-            <Label.Foreground>
-                <LinearGradientBrush EndPoint="0.5,1" MappingMode="RelativeToBoundingBox" StartPoint="0.5,0">
-                    <LinearGradientBrush.RelativeTransform>
-                        <TransformGroup>
-                            <ScaleTransform CenterY="0.5" CenterX="0.5"/>
-                            <SkewTransform CenterY="0.5" CenterX="0.5"/>
-                            <RotateTransform Angle="87" CenterY="0.5" CenterX="0.5"/>
-                            <TranslateTransform/>
-                        </TransformGroup>
-                    </LinearGradientBrush.RelativeTransform>
-                    <GradientStop Color="#FF7D00A2"/>
-                    <GradientStop Color="#FF004AB6" Offset="1"/>
-                </LinearGradientBrush>
-            </Label.Foreground>
-        </Label>
+        Title="Главное Окно" Height="450" Width="800" Closing="Window_Closing" ResizeMode="NoResize" Closed="Window_Closed">
+    <Grid x:Name="wingrid" Background="White" >
+        <Label x:Name="title" HorizontalContentAlignment="Center" Content="Страховая мед компания" HorizontalAlignment="Left" Margin="44,12,0,0" VerticalAlignment="Top" Height="80" Width="551" FontSize="30" MouseEnter="Title_MouseEnter" Background="{x:Null}" FontWeight="Bold" MouseLeave="Title_MouseLeave" Foreground="Black"/>
         <Button x:Name="butt" HorizontalAlignment="Left" Height="57"  Margin="600,10,0,0" VerticalAlignment="Top" Width="182" Click="Button_Click" Visibility="Visible" Opacity="1" Background="{x:Null}" BorderBrush="#00707070">
             <Label x:Name="authButton" Content="Авторизация" FontSize="20" GotFocus="AuthButton_GotFocus"  MouseEnter="AuthButton_MouseEnter" MouseLeave="AuthButton_MouseLeave" MouseDoubleClick="AuthButton_MouseDoubleClick" Height="57" Width="180"/>
         </Button>
-        <CheckBox x:Name="darkbox" Content="темный режим" HorizontalAlignment="Left" Margin="61,27,0,0" VerticalAlignment="Top" Checked="CheckBox_Checked" Unchecked="Darkbox_Unchecked"/>
         <Label x:Name="lgscs" Content="Вы Авторизованы" HorizontalAlignment="Left" Margin="600,12,0,0" VerticalAlignment="Top"  FontSize="20" Visibility="Hidden"/>
-        <Button x:Name="USLUGI_LINK" Content="Услуги" Background="{x:Null}" FontSize="30" HorizontalAlignment="Left" Margin="134,166,0,0" VerticalAlignment="Top" Width="214" BorderBrush="{x:Null}" Height="158" Click="Button_Click_1"/>
-        <Label x:Name="debug" Content="Label" HorizontalAlignment="Left" Margin="514,300,0,0" VerticalAlignment="Top"/>
+        <Button x:Name="USLUGI_LINK" Content="Услуги" Background="{x:Null}" FontSize="30" HorizontalAlignment="Left" Margin="94,169,0,0" VerticalAlignment="Top" Width="214" BorderBrush="{x:Null}" Height="158" Click="Button_Click_1"/>
+        <Label x:Name="role" Content="" HorizontalAlignment="Left" Margin="600,60,0,0" VerticalAlignment="Top"/>
+        <Button x:Name="listbut" Content="Список клиентов" HorizontalAlignment="Left" Margin="308,171,0,0" VerticalAlignment="Top" Width="206" Background="{x:Null}"  Height="158" Visibility="Hidden" FontSize="25" Foreground="Black" BorderBrush="{x:Null}"/>
+        <Button x:Name="taskbut" Content="отчеты" FontSize="25" HorizontalAlignment="Left" Margin="514,173,0,0" VerticalAlignment="Top" Width="191" Height="153" Visibility="Hidden" BorderBrush="{x:Null}" Background="{x:Null}"/>
     </Grid>
 </Window>
