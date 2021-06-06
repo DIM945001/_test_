@@ -91,3 +91,7 @@ C:\Users\DIMANI4\Source\Repos\DIM945001\_test_\obj\Debug\WpfApp32.csproj.CoreCom
 C:\Users\DIMANI4\Source\Repos\DIM945001\_test_\obj\Debug\WpfApp32.exe
 C:\Users\DIMANI4\Source\Repos\DIM945001\_test_\obj\Debug\WpfApp32.pdb
 C:\Users\DIMANI4\Source\Repos\DIM945001\_test_\bin\Debug\WpfApp32.exe.config
+C:\Users\DIMANI4\Source\Repos\DIM945001\_test_\obj\Debug\uslugi_reg.g.cs
+C:\Users\DIMANI4\Source\Repos\DIM945001\_test_\obj\Debug\uslugi_reg.baml
+C:\Users\DIMANI4\Source\Repos\DIM945001\_test_\obj\Debug\client_list.g.cs
+C:\Users\DIMANI4\Source\Repos\DIM945001\_test_\obj\Debug\client_list.baml

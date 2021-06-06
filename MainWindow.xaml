@@ -14,7 +14,7 @@
         <Label x:Name="lgscs" Content="Вы Авторизованы" HorizontalAlignment="Left" Margin="600,12,0,0" VerticalAlignment="Top"  FontSize="20" Visibility="Hidden"/>
         <Button x:Name="USLUGI_LINK" Content="Услуги" Background="{x:Null}" FontSize="30" HorizontalAlignment="Left" Margin="94,169,0,0" VerticalAlignment="Top" Width="214" BorderBrush="{x:Null}" Height="158" Click="Button_Click_1"/>
         <Label x:Name="role" Content="" HorizontalAlignment="Left" Margin="600,60,0,0" VerticalAlignment="Top"/>
-        <Button x:Name="listbut" Content="Список клиентов" HorizontalAlignment="Left" Margin="308,171,0,0" VerticalAlignment="Top" Width="206" Background="{x:Null}"  Height="158" Visibility="Hidden" FontSize="25" Foreground="Black" BorderBrush="{x:Null}"/>
+        <Button x:Name="listbut" Content="Список клиентов" HorizontalAlignment="Left" Margin="308,171,0,0" VerticalAlignment="Top" Width="206" Background="{x:Null}"  Height="158" Visibility="Hidden" FontSize="25" Foreground="Black" BorderBrush="{x:Null}" Click="listbut_Click"/>
         <Button x:Name="taskbut" Content="отчеты" FontSize="25" HorizontalAlignment="Left" Margin="514,173,0,0" VerticalAlignment="Top" Width="191" Height="153" Visibility="Hidden" BorderBrush="{x:Null}" Background="{x:Null}"/>
     </Grid>
 </Window>

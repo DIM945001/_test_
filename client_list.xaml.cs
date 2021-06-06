@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Data;
@@ -14,22 +15,14 @@ using System.Windows.Shapes;
 namespace WpfApp32
 {
     /// <summary>
-    /// Логика взаимодействия для uslugi.xaml
+    /// Логика взаимодействия для client_list.xaml
     /// </summary>
-    public partial class uslugi : Window
+    public partial class client_list : Window
     {
-        public uslugi()
+        public client_list()
         {
             InitializeComponent();
         }
-        public string s = "";
 
-        private void Button_Click(object sender, RoutedEventArgs e)
-        {
-
-            Page uslug = new uslugi_reg();
-            frame.Navigate(uslug);
-            s = ".";
-        }
     }
 }

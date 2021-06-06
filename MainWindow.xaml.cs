@@ -137,5 +137,13 @@ namespace WpfApp32
         {
             Application.Current.Shutdown();
         }
+
+        private void listbut_Click(object sender, RoutedEventArgs e)
+        {
+            client_list cl = new client_list();
+            uslugi_reg uslugi = new uslugi_reg();
+            cl.Show();
+            cl.comboBox.Items.Add("Заявка от клиента");
+        }
     }
 }

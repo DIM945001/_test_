@@ -1,14 +1,12 @@
-﻿<Window x:Class="WpfApp32.uslugi"
+﻿<Window x:Class="WpfApp32.client_list"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:WpfApp32"
         mc:Ignorable="d"
-        Title="uslugi" Height="450" Width="400" Background="White">
+        Title="client_list" Height="450" Width="300">
     <Grid>
-        <Frame x:Name="frame" />
-        <Button  Content="заключить договор в страховой компании (отправить заявку)" Margin="10,40,10,345" Click="Button_Click" />
-        
+        <ComboBox x:Name="comboBox" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Width="272"/>
     </Grid>
 </Window>
