@@ -10,31 +10,28 @@ using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
 using System.Windows.Shapes;
 
 namespace WpfApp32
 {
     /// <summary>
-    /// Логика взаимодействия для uslugi_reg.xaml
+    /// Логика взаимодействия для tasks.xaml
     /// </summary>
-    public partial class uslugi_reg : Page
+    public partial class tasks : Window
     {
-        public uslugi_reg()
+        public tasks()
         {
             InitializeComponent();
         }
-        
-        
+
         private void button_Click(object sender, RoutedEventArgs e)
         {
-            client_list client_ = new client_list();
-            uslugi usl = new uslugi();
-            
-            MessageBox.Show("Заявка отправлена", "Услуги");
-            
-            
+            MessageBox.Show("Клиент 1: Договор N:314554, Вид:ДМС от несчастных случаев, Страховой Случай:Да Статус: Оплачено");
+        }
 
+        private void button1_Click(object sender, RoutedEventArgs e)
+        {
+            MessageBox.Show("Отчеты отправлены");
         }
     }
 }

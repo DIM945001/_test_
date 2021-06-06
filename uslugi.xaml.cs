@@ -10,6 +10,7 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
+using System.Diagnostics;
 
 namespace WpfApp32
 {
@@ -30,6 +31,12 @@ namespace WpfApp32
             Page uslug = new uslugi_reg();
             frame.Navigate(uslug);
             s = ".";
+        }
+
+        private void buttond_Click(object sender, RoutedEventArgs e)
+        {
+            string path = "C:\\Users\\DIMANI4\\Source\\Repos\\DIM945001\\_test_\\dogovor-dms.doc";
+            Process.Start(path);
         }
     }
 }

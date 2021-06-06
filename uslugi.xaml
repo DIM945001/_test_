@@ -9,6 +9,7 @@
     <Grid>
         <Frame x:Name="frame" />
         <Button  Content="заключить договор в страховой компании (отправить заявку)" Margin="10,40,10,345" Click="Button_Click" />
-        
+        <Button x:Name="buttond" Visibility="Visible" Content="Договор" HorizontalAlignment="Left" VerticalAlignment="Top" Width="19" Click="buttond_Click" Height="11"/>
+
     </Grid>
 </Window>

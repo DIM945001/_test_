@@ -24,5 +24,10 @@ namespace WpfApp32
             InitializeComponent();
         }
 
+        private void button_Click(object sender, RoutedEventArgs e)
+        {
+            uslugi us = new uslugi();
+            us.buttond.Visibility = Visibility.Visible;
+        }
     }
 }

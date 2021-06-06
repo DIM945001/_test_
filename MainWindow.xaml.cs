@@ -143,7 +143,13 @@ namespace WpfApp32
             client_list cl = new client_list();
             uslugi_reg uslugi = new uslugi_reg();
             cl.Show();
-            cl.comboBox.Items.Add("Заявка от клиента");
+            cl.comboBox.Items.Add("P");
+        }
+
+        private void taskbut_Click(object sender, RoutedEventArgs e)
+        {
+            tasks tsk = new tasks();
+            tsk.Show();
         }
     }
 }

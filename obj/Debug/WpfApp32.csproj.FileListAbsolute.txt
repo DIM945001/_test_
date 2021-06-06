@@ -95,3 +95,5 @@ C:\Users\DIMANI4\Source\Repos\DIM945001\_test_\obj\Debug\uslugi_reg.g.cs
 C:\Users\DIMANI4\Source\Repos\DIM945001\_test_\obj\Debug\uslugi_reg.baml
 C:\Users\DIMANI4\Source\Repos\DIM945001\_test_\obj\Debug\client_list.g.cs
 C:\Users\DIMANI4\Source\Repos\DIM945001\_test_\obj\Debug\client_list.baml
+C:\Users\DIMANI4\Source\Repos\DIM945001\_test_\obj\Debug\tasks.g.cs
+C:\Users\DIMANI4\Source\Repos\DIM945001\_test_\obj\Debug\tasks.baml
